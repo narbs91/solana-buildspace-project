@@ -3,6 +3,10 @@
   background-color: #1a202c;
   overflow: scroll;
   text-align: center;
+  background-image: url("./assets/south-park-boys-standing.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -24,12 +28,12 @@
   margin: 0;
   font-size: 50px;
   font-weight: bold;
-  color: white;
+  color: black;
 }
 
 .sub-text {
   font-size: 25px;
-  color: white;
+  color: black;
 }
 
 .gradient-text {
@@ -53,7 +57,7 @@
 }
 
 .connect-wallet-button {
-  background: -webkit-linear-gradient(left, #60c657, #35aee2);
+  background: #35aee2;
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }
@@ -66,7 +70,7 @@
 }
 
 .submit-gif-button {
-  background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
+  background: -webkit-linear-gradient(left, #60c657, #35aee2);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
   margin-left: 10px;
@@ -76,11 +80,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 100%;
-  bottom: 0;
-  left: 0;
   padding-bottom: 45px;
+  padding-top: 45px;
 }
 
 .twitter-logo {
@@ -118,15 +120,15 @@
   object-fit: cover;
 }
 
-.connected-container input[type='text'] {
+.connected-container input[type="text"] {
   display: inline-block;
-  color: white;
+  color: black;
   padding: 10px;
   width: 50%;
   height: 60px;
   font-size: 16px;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: white;
   border: none;
   border-radius: 10px;
   margin: 50px auto;
@@ -139,4 +141,8 @@
 .submitter-div {
   color: white;
   padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #35aee2;
+  border-radius: 10px;
 }
