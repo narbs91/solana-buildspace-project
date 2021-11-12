@@ -58,6 +58,13 @@
   animation: gradient-animation 4s ease infinite;
 }
 
+.disconnect-wallet-button {
+  background: -webkit-linear-gradient(left, red, #1a202c);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+  margin: 10px;
+}
+
 .submit-gif-button {
   background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
   background-size: 200% 200%;
@@ -127,4 +134,9 @@
 
 .connected-container button {
   height: 50px;
+}
+
+.submitter-div {
+  color: white;
+  padding: 10px;
 }
