@@ -7,7 +7,7 @@ import idl from "./idl.json";
 import kp from './keypair.json'
 
 // SystemProgram is a reference to the Solana runtime!
-const { SystemProgram, Keypair } = web3;
+const { SystemProgram } = web3;
 
 // Create a keypair for the account that will hold the GIF data.
 const arr = Object.values(kp._keypair.secretKey)
@@ -26,15 +26,8 @@ const opts = {
 };
 
 // Constants
-const TWITTER_HANDLE = "_buildspace";
+const TWITTER_HANDLE = "narb_s";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-
-const TEST_GIFS = [
-  "https://media.giphy.com/media/uQHtUvva9Qljy/giphy.gif",
-  "https://media.giphy.com/media/3o85xm2acfUpAQbxwk/giphy.gif",
-  "https://media.giphy.com/media/26ufi8YuYu2BxVS48/giphy.gif",
-  "https://media.giphy.com/media/l0HlPtbGpcnqa0fja/giphy.gif",
-];
 
 const App = () => {
   const [walletAddress, setWalletAddress] = useState(null);
@@ -45,6 +38,7 @@ const App = () => {
     window.addEventListener("load", async (event) => {
       await checkIfWalletIsConnect();
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getGifList = async () => {
@@ -68,6 +62,7 @@ const App = () => {
       console.log("Fetching GIF list...");
       getGifList();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [walletAddress]);
 
   const connectWallet = async () => {
@@ -233,8 +228,8 @@ const App = () => {
               {/* We use index as the key instead, also, the src is now item.gifLink */}
               {gifList.map((item, index) => (
                 <div className="gif-item" key={index}>
-                  <img src={item.gifLink} />
-                  <div class="submitter-div">
+                  <img src={item.gifLink} alt="South park based gif"/>
+                  <div className="submitter-div">
                     <span>Submitted by: {item.userAddress.toString()}</span>  
                   </div>
                 </div>
@@ -256,7 +251,7 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header">🖼 South Park GIF Portal</p>
+          <p className="header">🐮 South Park GIF Portal</p>
           <p className="sub-text">
             Experience South Park in the metaverse (sweeeeeet) ✨
           </p>
@@ -271,7 +266,7 @@ const App = () => {
             href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
+          >{`built by @${TWITTER_HANDLE}`}</a>
         </div>
       </div>
     </div>
